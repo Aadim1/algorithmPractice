@@ -13,3 +13,12 @@ class Solution:
             head = head.next
             count += 1
         return hashMap[count//2]
+    
+    
+    # ------------------ V2 -----------------------
+    
+    slow = fast = head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        return slow
